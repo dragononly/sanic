@@ -6,7 +6,7 @@ import random
 import numpy as np
 from bert_serving.client import BertClient
 # ip address of the GPU machine
-bc = BertClient(ip='10.13.5.221')
+bc = BertClient(ip='192.168.187.41')
 _HOST = 'any.moono.vip'
 _PORT = '19530'
 client = Milvus(_HOST, _PORT)
@@ -52,7 +52,7 @@ async def test(request):
 
     client.insert(collection_name, hybrid_entities,
                   partition_tag="American")
-    return json({"hello": "world"})
+    return json({"hello": "ok"})
 
 
 @app.route("/search")
