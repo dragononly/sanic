@@ -27,11 +27,10 @@ collection_param = {
         # {"name": "title", "type": DataType.STRING},
         {"name": "duration", "type": DataType.INT32, "params": {"unit": "minute"}},
         {"name": "release_year", "type": DataType.INT32},
-        {"name": "myid", "type": DataType.INT32},
         {"name": "embedding", "type": DataType.FLOAT_VECTOR, "params": {"dim": 768}},
     ],
     "segment_row_limit": 4096,
-    "auto_id": True
+    "auto_id": False
 }
 
 client.create_collection(collection_name, collection_param)
